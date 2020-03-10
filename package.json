@@ -4,22 +4,25 @@
   "description": "Frontend boilerplate based on gulp",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
     "build": "gulp build",
+    "lint": "stylelint src/**/*.scss && eslint src/**/*.js && htmllint --rc ./node_modules/@mate-academy/htmllint-config/.htmllintrc src/*.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "lint": "stylelint src/**/*.scss && eslint src/**/*.js && htmllint --rc ./node_modules/@mate-academy/htmllint-config/.htmllintrc src/*.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "npm run deploy",
+    "start": "gulp",
+    "test": "npm run lint"
   },
-  "author": "Mate academy",
+  "keywords": [],
+  "author": "Mate Academy",
   "license": "GPL-3.0",
   "devDependencies": {
+    "@mate-academy/browsersync-config": "*",
     "@mate-academy/eslint-config": "*",
     "@mate-academy/htmllint-config": "*",
     "@mate-academy/stylelint-config": "*",
     "browser-sync": "^2.26.3",
     "colors": "^1.3.3",
-    "eslint": "^5.9.0",
+    "eslint": "^5.16.0",
     "eslint-plugin-node": "^9.0.1",
     "gh-pages": "2.0.0",
     "gulp": "^4.0.2",
@@ -31,7 +34,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^9.0.0",
-    "htmllint": "^0.8.0",
+    "htmllint": "^0.7.3",
     "htmllint-cli": "0.0.7",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
@@ -39,7 +42,6 @@
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.6.1"
   },
-  "dependencies": {},
   "lint-staged": {
     "linters": {
       "*.scss": [
@@ -57,7 +59,9 @@
     },
     "ignore": [
       "**/dist/**",
-      "**/lib/**"
+      "**/lib/**",
+      "**/backstop_data/**",
+      "**/report/**"
     ]
   },
   "husky": {
@@ -65,5 +69,8 @@
       "post-commit": "git update-index --again",
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
