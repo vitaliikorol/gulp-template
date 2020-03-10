@@ -70,9 +70,7 @@ gulp.task('processStyles', series('lintCss', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(gulpReplacePath(/(?:\.\.\/){2,}images/g, '../images'))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-    }))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${distDirectory}/styles`))
     .pipe(browserSync.reload({ stream: true }));
@@ -98,6 +96,7 @@ gulp.task('build', series(
 
 gulp.task('serve', function() {
   browserSync.init({
+    notify: false,
     server: {
       baseDir: distDirectory,
     },
