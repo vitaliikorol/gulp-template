@@ -97,7 +97,7 @@ function check() {
   ];
 
   if (!!second && second === first && second === third) {
-    if (second === `url("../images/x.png")`) {
+    if (second === `url("images/x.png")`) {
       alert(
         `Team 'X' wins`
       );
@@ -108,7 +108,7 @@ function check() {
   }
 
   if (!!fifth && fifth === forth && fifth === sixth) {
-    if (fifth === `url("../images/x.png")`) {
+    if (fifth === `url("images/x.png")`) {
       alert(
         `Team 'X' wins`
       );
@@ -119,7 +119,7 @@ function check() {
   }
 
   if (!!eights && eights === sevens && eights === ninth) {
-    if (eights === `url("../images/x.png")`) {
+    if (eights === `url("images/x.png")`) {
       alert(
         `Team 'X' wins`
       );
@@ -130,7 +130,7 @@ function check() {
   }
 
   if (!!forth && forth === first && forth === sevens) {
-    if (forth === `url("../images/x.png")`) {
+    if (forth === `url("images/x.png")`) {
       alert(
         `Team 'X' wins`
       );
@@ -141,7 +141,7 @@ function check() {
   }
 
   if (!!fifth && fifth === second && fifth === eights) {
-    if (fifth === `url("../images/x.png")`) {
+    if (fifth === `url("images/x.png")`) {
       alert(
         `Team 'X' wins`
       );
@@ -152,7 +152,7 @@ function check() {
   }
 
   if (!!sixth && sixth === third && sixth === ninth) {
-    if (sixth === `url("../images/x.png")`) {
+    if (sixth === `url("images/x.png")`) {
       alert(
         `Team 'X' wins`
       );
@@ -163,7 +163,7 @@ function check() {
   }
 
   if (!!fifth && fifth === first && fifth === ninth) {
-    if (fifth === `url("../images/x.png")`) {
+    if (fifth === `url("images/x.png")`) {
       alert(
         `Team 'X' wins`
       );
@@ -174,7 +174,7 @@ function check() {
   }
 
   if (!!fifth && fifth === sevens && fifth === third) {
-    if (fifth === `url("../images/x.png")`) {
+    if (fifth === `url("images/x.png")`) {
       alert(
         `Team 'X' wins`
       );
