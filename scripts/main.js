@@ -60,9 +60,9 @@ function playGame() {
       }
 
       if (step % 2) {
-        cells[cell].style.backgroundImage = `url("../images/x.png")`;
+        cells[cell].style.backgroundImage = `url("images/x.png")`;
       } else {
-        cells[cell].style.backgroundImage = `url("../images/o.png")`;
+        cells[cell].style.backgroundImage = `url("images/o.png")`;
       }
 
       step++;
